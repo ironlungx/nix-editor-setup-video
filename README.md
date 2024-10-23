@@ -66,3 +66,7 @@ FILE PATH: /home/user/.config/Code/User/settings.json
   // },
 }
 ```
+
+## emacs
+
+https://emacs-lsp.github.io/lsp-mode/page/lsp-nix/#installation
