@@ -69,4 +69,25 @@ FILE PATH: /home/user/.config/Code/User/settings.json
 
 ## emacs
 
+```emacs-lisp
+(use-package lsp-mode
+  :ensure t)
+
+(use-package nix-mode
+  :ensure t
+  :hook
+  (nix-mode . lsp-deferred) ;; So that direnv integration with `envrc-mode' will work
+  :config
+  (setq lsp-nix-nixd-server-path "nixd")) ;; Note: make sure that nil is not in your $PATH
+
+;; For Tree Sitter
+(use-package nix-ts-mode
+  :ensure t
+  :mode "\\.nix\\'"
+  :hook
+  (nix-ts-mode . lsp-deferred) ;; So that envrc mode will work
+  :config
+  (setq lsp-nix-nixd-server-path "nixd")) ;; Note: make sure that nil is not in your $PATH
+```
+
 https://emacs-lsp.github.io/lsp-mode/page/lsp-nix/#installation
