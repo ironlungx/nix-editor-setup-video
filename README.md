@@ -1,5 +1,5 @@
 # Nixd video
-
+This repo contains code shown in [this](https://youtu.be/M_zMoHlbZBY) video
 ## Install nixd, and set nixpkgs in nixpath
 ```nix
 { pkgs, inputs, ... }: 
@@ -16,7 +16,7 @@
 ```
 
 
-## lspconfig nixd setup
+## lspconfig nixd setup (neovim)
 ```lua
 require("lspconfig").nixd.setup({
   cmd = { "nixd" },
@@ -44,7 +44,7 @@ require("lspconfig").nixd.setup({
 
 ## vscode nix-ide setup
 
-FILE PATH: /home/user/.config/Code/User/settings.json
+FILE PATH: `/home/user/.config/Code/User/settings.json`
 
 ```jsonc
 {
